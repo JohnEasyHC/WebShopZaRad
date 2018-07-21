@@ -4,12 +4,10 @@ if(!isset($_SESSION)){
 }
 if(isset($_SESSION['time']) && time()- $_SESSION['time']>900){
 	session_destroy();
-	$msg="Your session expired due to inactivity"
+	$msg="Your session expired due to inactivity";
 }else{
 	$_SESSION['time'] = time(); 
 }
-
-//if(array_key_exists('telefon', $errors))echo $errors['telefon']
 
 $first_name=isset($_POST['first_name'])?$_POST['first_name']:"";
 $last_name=isset($_POST['last_name'])?$_POST['last_name']:"";
@@ -18,24 +16,11 @@ $errors=isset($errors)?$errors:array();
 if(array_key_exists('first_name', $errors))$first_name="";
 if(array_key_exists('last_name', $errors))$last_name="";
 
-                echo "<br>";
-                var_dump($first_name);
-                echo "<br>";
-                var_dump($last_name);
-                echo "<br>";
-                var_dump($email);
-                echo "<br>";
-                var_dump($password);
-                echo "<br>";echo "<br>";
-                var_dump($errors);
-                $msg='Successful registration'
-
-
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Best Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Register :: w3layouts</title>
+<title></title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -76,8 +61,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul>
 						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 <span>567</span> 892</li>
-						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.html">Login</a></li>
-						<li class="active"><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.html">Register</a></li>
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="routes.php?page=showlogin">Login</a></li>
+						<li class="active"><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="routes.php?page=showregister">Register</a></li>
 					</ul>
 				</div>
 				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
@@ -92,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="logo-nav">
 				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-					<h1><a href="index.html">Best Store <span>Shop anywhere</span></a></h1>
+					<h1><a href="routes.php?page=index">Best Store <span>Shop anywhere</span></a></h1>
 				</div>
 				<div class="logo-nav-left1">
 					<nav class="navbar navbar-default">
@@ -249,14 +234,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<form action="routes.php" method="POST" class="animated wow slideInUp" data-wow-delay=".5s">
 					<input type="text" name="first_name" placeholder="First Name..." required=" " >
 					<input type="text" name="last_name" placeholder="Last Name..." required=" " >
-				</form>
+				<?php /*</form>*/ ?>
 				<div class="register-check-box animated wow slideInUp" data-wow-delay=".5s">
 					<div class="check">
 						<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>Subscribe to Newsletter</label>
 					</div>
 				</div>
 				<h6 class="animated wow slideInUp" data-wow-delay=".5s">Login information</h6>
-				<form class="animated wow slideInUp" data-wow-delay=".5s">
+				<?php /*<form class="animated wow slideInUp" data-wow-delay=".5s">*/ ?>
 					<input type="email" name="email" placeholder="Email Address" required=" " >
 					<input type="password" name="password" placeholder="Password" required=" " >
 					<input type="password" name="cpassword" placeholder="Password Confirmation" required=" " >

@@ -93,6 +93,9 @@ class DAO{
 		$statement->bindValue(1, $email); 
 		
 		$statement->execute();
+
+		$result=$statement->fetch();
+		return $result;
 	}	
 
 	/*public function delete____($_____){

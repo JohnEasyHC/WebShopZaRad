@@ -1,5 +1,14 @@
 <?php
+if(!isset($_SESSION)){
+    session_start();
+}
 
+if(isset($_SESSION['time']) && time()- $_SESSION['time']>900){
+	session_destroy();
+	$msg="Your session expired due to inactivity";
+}else{
+	$_SESSION['time'] = time(); 
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,8 +54,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul>
 						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 <span>567</span> 892</li>
-						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.html">Login</a></li>
-						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.html">Register</a></li>
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="routes.php?page=showrlogin">Login</a></li>
+						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="routes.php?page=showregister">Register</a></li>
 					</ul>
 				</div>
 				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
@@ -61,7 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="logo-nav">
 				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-					<h1><a href="index.html">Best Store <span>Shop anywhere</span></a></h1>
+					<h1><a href="routes.php?page=index">Best Store <span>Shop anywhere</span></a></h1>
 				</div>
 				<div class="logo-nav-left1">
 					<nav class="navbar navbar-default">
@@ -76,7 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li><a href="index.html">Home</a></li>	
+							<li><a href="routes.php?page=index">Home</a></li>	
 							<!-- Mega Menu -->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>

@@ -4,7 +4,8 @@ if(!isset($_SESSION)){
     session_start();
 }
 if(isset($_SESSION['time']) && time()- $_SESSION['time']>900){
-	header("Location:routes.php?page=logout");
+	session_destroy();
+	$msg="Your session expired due to inactivity";
 }else{
 	$_SESSION['time'] = time(); 
 }

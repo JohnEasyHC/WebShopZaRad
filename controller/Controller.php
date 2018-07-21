@@ -13,7 +13,7 @@ class Controller{
 
 	
 	public function index(){
-		include 'login.php';
+		include 'index.php';
 	}
 
 	
@@ -91,29 +91,9 @@ class Controller{
     		if(count($errors)==0){                
                 $dao=new DAO();
                 $dao->insertUser($first_name, $last_name, $email, $password);
-                echo "<br>";
-                var_dump($first_name);
-                echo "<br>";
-                var_dump($last_name);
-                echo "<br>";
-                var_dump($email);
-                echo "<br>";
-                var_dump($password);
-                echo "<br>";echo "<br>";
-                var_dump($errors);
                 $msg='Successful registration';
                 include 'login.php';                    
-            }else{
-                echo "<br>";
-                var_dump($first_name);
-                echo "<br>";
-                var_dump($last_name);
-                echo "<br>";
-                var_dump($email);
-                echo "<br>";
-                var_dump($password);
-                echo "<br>";echo "<br>";
-                var_dump($errors);            	
+            }else{            	
             	$msg='Not registred'; 
             	include 'register.php';                 
             }    	    	
@@ -129,8 +109,9 @@ class Controller{
 
 		$email=isset($_POST['email'])?$_POST['email']:"";
     	$password=isset($_POST['password'])?$_POST['password']:"";
+        $user=isset($user)?$user:"";
 		
-        if(empty($email)){       
+        if(!isset($email)){       
              $errors['email']='Email is required';
         }else{
 			$email = test_input($email);
@@ -140,9 +121,11 @@ class Controller{
     			if($user){   				
     			}else{
     				$errors['email']='Incorrect email adress, please register';
+                    include 'login.php';
     			}
             }else{
                  $errors['email']="Incorrect email adress format";
+                 include 'login.php';
             }       	      	
         }
     			 				
