@@ -7,7 +7,7 @@ if(isset($_SESSION['time']) && time()- $_SESSION['time']>900){
 	session_destroy();
 	$msg="Your session expired due to inactivity";
 }else{
-	$_SESSION['time'] = time(); 
+	$_SESSION['time'] = time();
 }
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ if(isset($_SESSION['time']) && time()- $_SESSION['time']>900){
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Best Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Best Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -39,14 +39,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link rel="stylesheet" href="css/jquery.countdown.css" />
 <!-- //timer -->
 <!-- animation-effect -->
-<link href="css/animate.min.css" rel="stylesheet"> 
+<link href="css/animate.min.css" rel="stylesheet">
 <script src="js/wow.min.js"></script>
 <script>
  new WOW().init();
 </script>
 <!-- //animation-effect -->
 </head>
-	
+
 <body>
 <!-- header -->
 	<div class="header">
@@ -56,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul>
 						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 892</li>
-						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="routes.php?page=showrlogin">Login</a></li>
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="routes.php?page=showlogin">Login</a></li>
 						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="routes.php?page=showregister">Register</a></li>
 					</ul>
 				</div>
@@ -84,10 +84,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-					</div> 
+					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html" class="act">Home</a></li>	
+							<li class="active"><a href="index.php" class="act">Home</a></li>
 							<!-- Mega Menu -->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
@@ -96,11 +96,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Men's Wear</h6>
-												<li><a href="products.html">Clothing</a></li>
-												<li><a href="products.html">Wallets</a></li>
-												<li><a href="products.html">Shoes</a></li>
-												<li><a href="products.html">Watches</a></li>
-												<li><a href="products.html">Accessories</a></li>
+												<li><a href="products.php">Clothing</a></li>
+												<li><a href="products.php">Wallets</a></li>
+												<li><a href="products.php">Shoes</a></li>
+												<li><a href="products.php">Watches</a></li>
+												<li><a href="products.php">Accessories</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
@@ -201,7 +201,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 						<div class="clearfix"> </div>
-					</div>	
+					</div>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -216,21 +216,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h4>Up to <span>50% <i>Off/-</i></span></h4>
 				<div class="wmuSlider example1">
 					<div class="wmuSliderWrapper">
-						<article style="position: absolute; width: 100%; opacity: 0;"> 
+						<article style="position: absolute; width: 100%; opacity: 0;">
 							<div class="banner-wrap">
 								<div class="banner-info1">
 									<p>T-Shirts + Formal Pants + Jewellery + Cosmetics</p>
 								</div>
 							</div>
 						</article>
-						<article style="position: absolute; width: 100%; opacity: 0;"> 
+						<article style="position: absolute; width: 100%; opacity: 0;">
 							<div class="banner-wrap">
 								<div class="banner-info1">
 									<p>Toys + Furniture + Lighting + Watches</p>
 								</div>
 							</div>
 						</article>
-						<article style="position: absolute; width: 100%; opacity: 0;"> 
+						<article style="position: absolute; width: 100%; opacity: 0;">
 							<div class="banner-wrap">
 								<div class="banner-info1">
 									<p>Tops + Books & Media + Sports</p>
@@ -239,17 +239,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</article>
 					</div>
 				</div>
-					<script src="js/jquery.wmuSlider.js"></script> 
+					<script src="js/jquery.wmuSlider.js"></script>
 					<script>
-						$('.example1').wmuSlider();         
-					</script> 
+						$('.example1').wmuSlider();
+					</script>
 			</div>
 		</div>
 	</div>
 <!-- //banner -->
 <!-- banner-bottom -->
 	<div class="banner-bottom">
-		<div class="container"> 
+		<div class="container">
 			<div class="banner-bottom-grids">
 				<div class="banner-bottom-grid-left animated wow slideInLeft" data-wow-delay=".5s">
 					<div class="grid">
@@ -262,7 +262,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<p>Officia deserunt mollit anim</p>
 									<p>Laboris nisi ut aliquip consequat</p>
 								</div>
-							</figcaption>			
+							</figcaption>
 						</figure>
 					</div>
 				</div>
@@ -305,7 +305,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="new-collections">
 		<div class="container">
 			<h3 class="animated wow zoomIn" data-wow-delay=".5s">New Collections</h3>
-			<p class="est animated wow zoomIn" data-wow-delay=".5s">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+			<p class="est animated wow zoomIn" data-wow-delay=".5s">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
 				deserunt mollit anim id est laborum.</p>
 			<div class="new-collections-grids">
 				<div class="col-md-3 new-collections-grid">
@@ -587,8 +587,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="new-collections-grid1-left simpleCart_shelfItem timer-grid-left-price">
 						<p><i>$580</i> <span class="item_price">$550</span></p>
 						<h4>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-							nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit 
-							qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui 
+							nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
+							qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
 							dolorem eum fugiat quo voluptas nulla pariatur.</h4>
 						<p><a class="item_add timer_add" href="#">add to cart </a></p>
 					</div>
@@ -635,7 +635,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="footer-grids">
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
 					<h3>About Us</h3>
-					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse.<span>Excepteur sint occaecat cupidatat 
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse.<span>Excepteur sint occaecat cupidatat
 						non proident, sunt in culpa qui officia deserunt mollit.</span></p>
 				</div>
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
